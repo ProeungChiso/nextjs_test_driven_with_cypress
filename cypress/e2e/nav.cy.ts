@@ -21,6 +21,12 @@ describe("Navigation", () => {
     cy.visit("http://localhost:3000/");
     cy.get('a[href*="page-service"]').click();
     cy.url().should("include", "page-service");
-    cy.get("h3").contains("Service");
+    cy.get("h1").contains("Service");
   }); 
+  it("should navigate to the Dashboard page", () =>{
+    cy.visit("http://localhost:3000/");
+    cy.get('a[href*="dashboard"]').click();
+    cy.url().should("include", "dashboard");
+    cy.get("h1").contains("Dashboard");
+  })
 });
