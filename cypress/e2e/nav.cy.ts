@@ -21,6 +21,6 @@ describe("Navigation", () => {
     cy.visit("http://localhost:3000/");
     cy.get('a[href*="page-service"]').click();
     cy.url().should("include", "page-service");
-    cy.get("h1").contains("Service");
+    cy.get("h3").contains("Service");
   }); 
 });

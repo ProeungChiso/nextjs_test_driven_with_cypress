@@ -1,6 +1,12 @@
+'use client'
 import { Button, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function NavbarComponent() {
+  const pathname = usePathname();
+  if (pathname.includes("/dashboard")) return null;
+  else
   return (
     <Navbar fluid>
       <NavbarBrand>
@@ -9,7 +15,9 @@ function NavbarComponent() {
         </span>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Button>Get started</Button>
+        <Button>
+          <Link href={'/dashboard'}>Go Dashboard</Link>
+        </Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>

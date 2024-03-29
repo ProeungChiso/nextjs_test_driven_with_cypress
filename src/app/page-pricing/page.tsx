@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function PagePricing(){
   return (
-    <h1 className="text-center">Pricing Page</h1>
+    <h1 className="text-center text-blue-700 text-2xl p-5 uppercase font-extrabold">Pricing Page</h1>
   )
 }
